@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sorting in array</title>
+    <style>
+        button{
+            background-color: hotpink;
+            padding: 5px;
+            border: dotted black;
+            color: azure;
+        }
+    </style>
+</head>
+
+<body style="background-color: plum;">
+    <center>
+        <h1>Javascript Array..... Sort and Reverse</h1>
+        <p>Click the button to sort and reverse the array</p>
+        <button onclick="sortfunction()">Sort me</button>
+        <br>
+        <br>
+        <button onclick="reversefunction()">Reverse me</button>
+
+        <p id="result"></p>
+        <script>
+            var cars = ["Toyota", "BMW", "Brabus", "Mercedes Benz"];
+
+            document.getElementById("result").innerHTML = cars;
+            function sortfunction() {
+                cars.sort();
+                document.getElementById("result").innerHTML = cars;
+            }
+            document.getElementById("result").innerHTML = cars;
+            function reversefunction() {
+                cars.reverse();
+                document.getElementById("result").innerHTML = cars;
+
+            }
+        </script>
+        <h1>Multiply every element in the array with 10:</h1>
+        <p id="product_value"></p>
+        <script>
+            var numbers = [28, 6, 19, 95];
+
+            function myFunction(num) {
+                return num * 10;
+
+            }
+            var newarray = numbers.map(myFunction);
+            document.getElementById
+                ("product_value").innerHTML = newarray;
+        </script>
+        <h3>Evaluate Variables.</h3>
+        <button onclick="myFunction()">Try it!</button>
+        <p id="result"></p>
+        <script>
+            function myFunction() {
+                var x = 10;
+                var y = 20;
+                var a = eval("x + y") + "<br>";
+                var b = eval("2 * 2") + "<br>";
+                var  c = eval("y - x") + "<br>";
+                var res = a + b + c; //concatenates the string
+                document.getElementById("result").innerHTML = res;
+            }
+
+        </script>
+
+
+    </center>
+</body>
+
+</html>
